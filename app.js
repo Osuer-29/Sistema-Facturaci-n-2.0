@@ -24,9 +24,10 @@ const content = document.getElementById("content");
 
 // Cargar módulos dinámicamente
 async function loadModule(moduleName) {
-  const module = await import(`./modules/${moduleName}.js`);
+  const module = await import(`./${moduleName}.js`);
   module.render(content, state, saveState);
 }
+
 
 // === Navegación Sidebar ===
 document.querySelectorAll(".sidebar a").forEach((link) => {
